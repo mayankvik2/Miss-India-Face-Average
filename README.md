@@ -6,6 +6,7 @@ In this post I wrote a Python script to Generate Virtual Miss India by face aver
 2.	Coordinate Transformation: The input facial images can be of very different sizes. So we need a way to normalize the faces and bring them to the same reference frame. To perform this I warp to transform 4137*2975 to 600×600 image I used Similarity Transform by OpenCV’s estimateRigidTransform requires 3 points for calculating similarity matrix.
 
 3.	Face Alignment: After similarity transform all images are of same size but to calculate the average face where the features are aligned, we first need to calculate the average of all transformed landmarks in the output image coordinates by:
+
 i.	Finding the Delaunay Triangulation: Delaunay triangulation allows us to break the image into triangles so I will use 68 points facial points and 8 points on the boundary of the output image 
  
 
